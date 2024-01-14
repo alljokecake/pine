@@ -1,68 +1,23 @@
-use clap::{Args, Parser, Subcommand};
+mod commands;
+mod opts;
 
-#[derive(Parser)]
-#[command(author, version, about, long_about = None)]
-#[clap()]
-struct Opts {
-    #[command(subcommand)]
-    command: Commands,
-}
+use clap::Parser;
+use opts::{Opts, Commands};
+use commands::{
+    auth::auth, 
+    whoami::whoami,
+};
 
-#[derive(Subcommand, Debug)]
-enum Commands {
-    /// Authenticate to deploy and manage squids 
-    Auth(AuthArgs),
-    /// Return user and context
-    Whoami(WhoamiArgs),
-    /// Return logs
-    Logs(LogsArgs),
-    /// Create a squid from template
-    Init(InitArgs),
-}
-
-#[derive(Args, Debug)]
-struct AuthArgs {
-    #[arg(short, long)]
-    key: Option<String>,
-}
-
-#[derive(Args, Debug)]
-struct LogsArgs {
-    #[arg(short, long)]
-    container: Option<String>,
-
-    #[arg(short, long)]
-    follow: Option<String>,
-
-    #[arg(short, long)]
-    level: Option<String>,
-
-    #[arg(short, long)]
-    pagesize: Option<String>,
-
-    #[arg(short, long)]
-    since: Option<String>,
-}
-
-#[derive(Args, Debug)]
-struct WhoamiArgs {}
-
-#[derive(Args, Debug)]
-struct InitArgs {}
 
 fn main() {
     let cli = Opts::parse(); // use anyhow
 
     match &cli.command {
         Commands::Auth(options) => {
-            println!("Authentication Key: {:?}", options.key);
-        },
-        Commands::Logs(options) => {
-            println!("Container: {:?}", options.container);
+            auth(options);
         },
         Commands::Whoami(_) => {
-            println!("who do you think you are talking to rn?");
+            whoami();
         },
-        _ => ()
     }
 }
