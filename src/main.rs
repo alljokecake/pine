@@ -23,41 +23,17 @@ fn main() {
     let opts = Opts::parse(); // use anyhow
 
     match &opts.command {
-        Commands::Auth(args) => {
-            auth(args);
-        },
-        Commands::Deploy(args) => {
-            deploy(args);
-        },
-        Commands::Explorer(args) => {
-            explorer(args);
-        },
-        Commands::Init(args) => {
-            init(args);
-        },
-        Commands::Logs(args) => {
-            logs(args);
-        },
-        Commands::Ls(args) => {
-            ls(args);
-        },
-        Commands::Prod(args) => {
-            prod(args);
-        },
-        Commands::Restart(args) => {
-            restart(args);
-        },
-        Commands::Rm(args) => {
-            rm(args);
-        },
-        Commands::Run(args) => {
-            run(args);
-        },
-        Commands::Secrets(args) => {
-            secrets(args);
-        },
-        Commands::Whoami(_) => {
-            whoami();
-        },
+        Commands::Auth(args) => auth(args),
+        Commands::Deploy(args) => deploy(args),
+        Commands::Explorer(args) => explorer(args),
+        Commands::Init(args) => init(args),
+        Commands::Logs(args) => logs(args),
+        Commands::Ls(args) => ls(args),
+        Commands::Prod(args) => prod(args),
+        Commands::Restart(args) => restart(args),
+        Commands::Rm(args) => rm(args),
+        Commands::Run(args) => run(args),
+        Commands::Secrets(args) => secrets(args),
+        Commands::Whoami(_) => whoami(),
     }
 }
