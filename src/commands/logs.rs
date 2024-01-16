@@ -2,7 +2,6 @@ use clap::Args;
 
 #[derive(Args, Debug)]
 pub struct LogsArgs {
-
     #[arg(short, long)]
     pub default: Option<String>,
 }

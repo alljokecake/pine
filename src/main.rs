@@ -2,25 +2,14 @@ mod commands;
 mod opts;
 
 use clap::Parser;
-use opts::{Opts, Commands};
 use commands::{
-    auth::auth, 
-    deploy::deploy,
-    explorer::explorer,
-    init::init,
-    logs::logs,
-    ls::ls,
-    prod::prod,
-    restart::restart,
-    rm::rm,
-    run::run,
-    secrets::secrets,
-    whoami::whoami,
+    auth::auth, deploy::deploy, explorer::explorer, init::init, logs::logs, ls::ls, prod::prod,
+    restart::restart, rm::rm, run::run, secrets::secrets, whoami::whoami,
 };
-
+use opts::{Commands, Opts};
 
 fn main() {
-    let opts = Opts::parse(); // use anyhow
+    let opts = Opts::parse();
 
     match &opts.command {
         Commands::Auth(args) => auth(args),

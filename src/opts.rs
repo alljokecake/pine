@@ -1,18 +1,9 @@
 use clap::{Parser, Subcommand};
 
 use crate::commands::{
-    auth::AuthArgs,
-    deploy::DeployArgs,
-    explorer::ExplorerArgs,
-    init::InitArgs,
-    logs::LogsArgs,
-    ls::LsArgs,
-    prod::ProdArgs,
-    restart::RestartArgs,
-    rm::RmArgs,
-    run::RunArgs,
-    secrets::SecretsArgs,
-    whoami::WhoamiArgs,
+    auth::AuthArgs, deploy::DeployArgs, explorer::ExplorerArgs, init::InitArgs, logs::LogsArgs,
+    ls::LsArgs, prod::ProdArgs, restart::RestartArgs, rm::RmArgs, run::RunArgs,
+    secrets::SecretsArgs, whoami::WhoamiArgs,
 };
 
 #[derive(Parser)]
@@ -25,8 +16,7 @@ pub struct Opts {
 
 #[derive(Subcommand, Debug)]
 pub enum Commands {
-
-    /// Authenticate to deploy and manage squids 
+    /// Authenticate to deploy and manage squids
     Auth(AuthArgs),
 
     /// Deploy a new or update an existing squid version
@@ -38,16 +28,16 @@ pub enum Commands {
     /// Create a squid from a template
     Init(InitArgs),
 
-    /// Fetch squid logs 
+    /// Fetch squid logs
     Logs(LogsArgs),
 
-    /// List squids and squid versions 
+    /// List squids and squid versions
     Ls(LsArgs),
 
     /// Assign squid version to the production endpoint
     Prod(ProdArgs),
 
-    /// Restart a squid version 
+    /// Restart a squid version
     Restart(RestartArgs),
 
     /// Remove a squid or squid version
@@ -56,7 +46,7 @@ pub enum Commands {
     /// Run a squid locally according to the deployment manifest
     Run(RunArgs),
 
-    /// Manage Account secrets 
+    /// Manage Account secrets
     Secrets(SecretsArgs),
 
     /// Return user and context
