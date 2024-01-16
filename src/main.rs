@@ -3,8 +3,18 @@ mod opts;
 
 use clap::Parser;
 use commands::{
-    auth::auth, deploy::deploy, explorer::explorer, init::init, logs::logs, ls::ls, prod::prod,
-    restart::restart, rm::rm, run::run, secrets::secrets, whoami::whoami,
+    auth::auth,
+    deploy::deploy,
+    explorer::explorer,
+    init::init,
+    logs::logs,
+    ls::ls,
+    prod::prod,
+    restart::restart,
+    rm::rm,
+    run::run,
+    secrets::secrets,
+    whoami::whoami,
 };
 use opts::{Commands, Opts};
 

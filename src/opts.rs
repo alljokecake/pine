@@ -1,9 +1,18 @@
 use clap::{Parser, Subcommand};
 
 use crate::commands::{
-    auth::AuthArgs, deploy::DeployArgs, explorer::ExplorerArgs, init::InitArgs, logs::LogsArgs,
-    ls::LsArgs, prod::ProdArgs, restart::RestartArgs, rm::RmArgs, run::RunArgs,
-    secrets::SecretsArgs, whoami::WhoamiArgs,
+    auth::AuthArgs,
+    deploy::DeployArgs,
+    explorer::ExplorerArgs,
+    init::InitArgs,
+    logs::LogsArgs,
+    ls::LsArgs,
+    prod::ProdArgs,
+    restart::RestartArgs,
+    rm::RmArgs,
+    run::RunArgs,
+    secrets::SecretsArgs,
+    whoami::WhoamiArgs,
 };
 
 #[derive(Parser)]
