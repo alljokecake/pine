@@ -1,5 +1,5 @@
-use clap::Args;
 use crate::config::config::DEFAULT_API_URL;
+use clap::Args;
 
 #[derive(Args, Debug)]
 pub struct AuthArgs {
@@ -10,5 +10,8 @@ pub struct AuthArgs {
 }
 
 pub fn auth(args: &AuthArgs) {
-    println!("Authentication Key: {:?}\nApi Url: {:?}", args.key, args.host);
+    println!(
+        "Authentication Key: {:?}\nApi Url: {:?}",
+        args.key, args.host
+    );
 }
