@@ -1,4 +1,4 @@
-use crate::config::config::DEFAULT_API_URL;
+use crate::config::config::{set_config, DEFAULT_API_URL};
 use clap::Args;
 
 #[derive(Args, Debug)]
@@ -10,8 +10,11 @@ pub struct AuthArgs {
 }
 
 pub fn auth(args: &AuthArgs) {
-    println!(
-        "Authentication Key: {:?}\nApi Url: {:?}",
-        args.key, args.host
-    );
+    match (&args.key, &args.host) {
+        (Some(key), Some(host)) => {
+            set_config(key, host);
+        },
+
+        _ => panic!(),
+    }
 }
