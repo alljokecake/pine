@@ -1,4 +1,5 @@
-use crate::config::config::{set_config, DEFAULT_API_URL};
+use crate::config::config::{DEFAULT_API_URL, set_config};
+
 use clap::Args;
 
 #[derive(Args, Debug)]
