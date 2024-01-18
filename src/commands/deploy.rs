@@ -21,5 +21,5 @@ pub struct DeployArgs {
 }
 
 pub fn deploy(args: &DeployArgs) {
-    println!("Manifest: {:?}", args.manifest);
+    todo!();
 }

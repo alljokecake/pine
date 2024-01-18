@@ -7,5 +7,5 @@ pub struct LsArgs {
 }
 
 pub fn ls(args: &LsArgs) {
-    println!("{:?}", args.default);
+    todo!();
 }

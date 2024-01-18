@@ -7,5 +7,5 @@ pub struct LogsArgs {
 }
 
 pub fn logs(args: &LogsArgs) {
-    println!("{:?}", args.default);
+    todo!();
 }

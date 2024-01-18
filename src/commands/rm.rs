@@ -7,5 +7,5 @@ pub struct RmArgs {
 }
 
 pub fn rm(args: &RmArgs) {
-    println!("{:?}", args.default);
+    todo!();
 }

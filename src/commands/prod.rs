@@ -7,5 +7,5 @@ pub struct ProdArgs {
 }
 
 pub fn prod(args: &ProdArgs) {
-    println!("{:?}", args.default);
+    todo!();
 }

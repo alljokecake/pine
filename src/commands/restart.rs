@@ -7,5 +7,5 @@ pub struct RestartArgs {
 }
 
 pub fn restart(args: &RestartArgs) {
-    println!("{:?}", args.default);
+    todo!();
 }

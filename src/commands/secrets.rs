@@ -7,5 +7,5 @@ pub struct SecretsArgs {
 }
 
 pub fn secrets(args: &SecretsArgs) {
-    println!("{:?}", args.default);
+    todo!();
 }

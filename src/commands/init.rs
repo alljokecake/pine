@@ -7,5 +7,5 @@ pub struct InitArgs {
 }
 
 pub fn init(args: &InitArgs) {
-    println!("{:?}", args.default);
+    todo!();
 }
