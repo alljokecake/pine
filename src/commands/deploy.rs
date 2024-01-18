@@ -3,8 +3,12 @@ use std::path::PathBuf;
 
 #[derive(Args, Debug)]
 pub struct DeployArgs {
-    /// Squid source
-    #[arg()]
+    #[arg(long_help = concat!(
+            "Squid source. Could be:\n",
+            "- a relative or absolute path to a local folder (e.g. '.')\n",
+            "- a URL to a .tar.gz archive\n",
+            "- a github URL to a git repo with a branch or commit tag\n",
+            ))]
     pub source: Option<String>,
 
     /// Relative path to a squid manifest file
