@@ -4,8 +4,11 @@ use clap::Args;
 
 #[derive(Args, Debug)]
 pub struct AuthArgs {
-    /// Subsquid Cloud deployment key
     #[arg(short, long, required = true)]
+    #[arg(long_help = concat!(
+            "Subsquid Cloud deployment key.\n",
+             "Log in to https://app.subsquid.io to create or update your key."
+            ))]
     pub key: Option<String>,
 
     #[arg(long, hide = true, default_value = DEFAULT_API_URL)]
