@@ -1,5 +1,6 @@
 pub mod auth;
 pub mod deploy;
+pub mod docs;
 pub mod explorer;
 pub mod init;
 pub mod logs;

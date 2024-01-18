@@ -3,6 +3,7 @@ use clap::{Parser, Subcommand};
 use crate::commands::{
     auth::AuthArgs,
     deploy::DeployArgs,
+    docs::DocsArgs,
     explorer::ExplorerArgs,
     init::InitArgs,
     logs::LogsArgs,
@@ -30,6 +31,9 @@ pub enum Commands {
 
     /// Deploy a new or update an existing squid version
     Deploy(DeployArgs),
+
+    /// Open the docs in a browser
+    Docs(DocsArgs),
 
     /// Visual explorer of deployed squids
     Explorer(ExplorerArgs),

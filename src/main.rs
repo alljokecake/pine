@@ -6,6 +6,7 @@ use clap::Parser;
 use commands::{
     auth::auth,
     deploy::deploy,
+    docs::docs,
     explorer::explorer,
     init::init,
     logs::logs,
@@ -25,6 +26,7 @@ fn main() {
     match &opts.command {
         Commands::Auth(args) => auth(args),
         Commands::Deploy(args) => deploy(args),
+        Commands::Docs(_) => docs(),
         Commands::Explorer(args) => explorer(args),
         Commands::Init(args) => init(args),
         Commands::Logs(args) => logs(args),
