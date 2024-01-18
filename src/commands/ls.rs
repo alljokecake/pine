@@ -6,6 +6,6 @@ pub struct LsArgs {
     pub default: Option<String>,
 }
 
-pub fn ls(args: &LsArgs) {
+pub fn ls(_args: &LsArgs) {
     todo!();
 }

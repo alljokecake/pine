@@ -6,6 +6,6 @@ pub struct ProdArgs {
     pub default: Option<String>,
 }
 
-pub fn prod(args: &ProdArgs) {
+pub fn prod(_args: &ProdArgs) {
     todo!();
 }

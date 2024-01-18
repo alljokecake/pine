@@ -6,6 +6,6 @@ pub struct RunArgs {
     pub default: Option<String>,
 }
 
-pub fn run(args: &RunArgs) {
+pub fn run(_args: &RunArgs) {
     todo!();
 }

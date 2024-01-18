@@ -6,6 +6,6 @@ pub struct ExplorerArgs {
     pub default: Option<String>,
 }
 
-pub fn explorer(args: &ExplorerArgs) {
+pub fn explorer(_args: &ExplorerArgs) {
     todo!();
 }

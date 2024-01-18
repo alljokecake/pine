@@ -6,6 +6,6 @@ pub struct SecretsArgs {
     pub default: Option<String>,
 }
 
-pub fn secrets(args: &SecretsArgs) {
+pub fn secrets(_args: &SecretsArgs) {
     todo!();
 }

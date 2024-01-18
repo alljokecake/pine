@@ -6,6 +6,6 @@ pub struct RestartArgs {
     pub default: Option<String>,
 }
 
-pub fn restart(args: &RestartArgs) {
+pub fn restart(_args: &RestartArgs) {
     todo!();
 }

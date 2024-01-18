@@ -7,6 +7,7 @@ pub struct AuthArgs {
     /// Subsquid Cloud deployment key
     #[arg(short, long, required = true)]
     pub key: Option<String>,
+
     #[arg(long, hide = true, default_value = DEFAULT_API_URL)]
     pub host: Option<String>,
 }

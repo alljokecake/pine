@@ -6,6 +6,6 @@ pub struct RmArgs {
     pub default: Option<String>,
 }
 
-pub fn rm(args: &RmArgs) {
+pub fn rm(_args: &RmArgs) {
     todo!();
 }
