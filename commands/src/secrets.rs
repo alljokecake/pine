@@ -1,6 +1,6 @@
 use clap::Args;
 
-// TODO: secrets:ls secrets:rm 
+// TODO: secrets:ls secrets:rm
 #[derive(Args, Debug)]
 pub struct SecretsArgs {
     #[arg(short, long)]
