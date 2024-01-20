@@ -8,6 +8,7 @@ homepage = "github.com/schlanqe/pine"
 
 [dependencies]
 anyhow.workspace = true
+chrono.workspace = true
 clap.workspace = true
 dirs.workspace = true
 open.workspace = true
@@ -20,6 +21,7 @@ config = { version = "0.1.0", path = "./config" }
 
 [workspace.dependencies]
 anyhow = "1.0.79"
+chrono = "0.4.31"
 clap = { version = "4.4.16", features = ["derive"] }
 dirs = "5.0.1"
 open = "5.0.1"
