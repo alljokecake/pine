@@ -2,8 +2,9 @@ use clap::Args;
 
 #[derive(Args, Debug)]
 pub struct ProdArgs {
-    #[arg(short, long)]
-    pub default: Option<String>,
+    /// name@version
+    #[arg()]
+    pub name_and_version: Option<String>,
 }
 
 pub fn prod(_args: &ProdArgs) {
