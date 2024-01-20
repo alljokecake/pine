@@ -1,10 +1,9 @@
+use dirs::home_dir;
+use serde::{Deserialize, Serialize};
 use std::env;
 use std::fs::{self, File};
 use std::io::{self, Read, Write};
 use std::path::{Path, PathBuf};
-use dirs::home_dir;
-
-use serde::{Deserialize, Serialize};
 
 pub const DEFAULT_API_URL: &str = "https://saas.infra.gc.subsquid.io/api";
 
