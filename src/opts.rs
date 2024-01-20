@@ -1,6 +1,6 @@
 use clap::{Parser, Subcommand};
 
-use crate::commands::{
+use commands::{
     auth::AuthArgs,
     deploy::DeployArgs,
     docs::DocsArgs,

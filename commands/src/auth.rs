@@ -1,4 +1,4 @@
-use crate::config::config::{set_config, DEFAULT_API_URL};
+use config::config::{set_config, DEFAULT_API_URL};
 
 use clap::Args;
 

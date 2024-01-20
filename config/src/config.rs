@@ -2,6 +2,7 @@ use std::env;
 use std::fs::{self, File};
 use std::io::{self, Read, Write};
 use std::path::{Path, PathBuf};
+use dirs::home_dir;
 
 use serde::{Deserialize, Serialize};
 
@@ -47,7 +48,7 @@ pub fn get_config_file_path() -> PathBuf {
     let config_dir = env::var("SUBSQUID_CLI_CONFIG_DIR")
         .map(PathBuf::from)
         .unwrap_or_else(|_| {
-            let home_dir = dirs::home_dir().expect("Unable to determine home directory");
+            let home_dir = home_dir().expect("Unable to determine home directory");
             home_dir.join(".hydra-cli").join("config.json")
         });
 
