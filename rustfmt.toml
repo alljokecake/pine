@@ -6,5 +6,6 @@ use_field_init_shorthand = true
 normalize_doc_attributes = true
 overflow_delimited_expr = true
 blank_lines_upper_bound = 2
+reorder_impl_items = true
 reorder_imports = true
 comment_width = 100
